@@ -3,49 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="calculator.css"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="calculator">
-            <form>
-                    <div class="display">
-                    <input class="display" type="text" name="display"/>
+    <main class="main">
+        <header class="header">
+            <a href="#" class="logo">Quiz.</a>
+        </header>
+    
+        <div class="container">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1> Quiz</h1>
+                    <div class="quiz-header">
+                        <!-- <span>Website Question</span> -->
+                        <span class="header-score">Score: 0 / 10</span>
+                        <span id="timer"></span>
                     </div>
-                    <div>
-                        <input class="btn operator" type="button" value="AC"  onclick="display.value='' "class="operator"/>
-                        <input class="btn operator" type="button" value="DEL"  onclick="display.value = display.value.toString() .slice(0,-1)" class="operator"/>
-                        <input class="btn operator" type="button" value="."  onclick="display.value +='.' " class="operator">
-                        <input class="btn operator" type="button" value="/"  onclick="display.value += '/' " class="operator">
+                    <h2 class="question-text">What does HTML stand for?</h2>
+
+                    <div class="option-list">
+                        <!-- <div class="option">
+                            <span>A. Hyper Type Multi Language</span>
+                        </div>
+
+                        <div class="option">
+                            <span>B. Hyper Text Multiple Language</span>
+                        </div>
+
+                        <div class="option">
+                            <span>C. Hyper Text Markup Language</span>
+                        </div>
+
+                        <div class="option">
+                            <span>D. Home Text Multi Language</span>
+                        </div> -->
                     </div>
-                    <div>
-                        <input class="btn" type="button" value="7" onclick="display.value += '7' "/>
-                        <input class="btn" type="button" value="8"  onclick="display.value += '8' "/>
-                        <input class="btn" type="button" value="9"  onclick="display.value += '9' "/>
-                        <input class="btn operator" type="button" value="&#xd7;"  onclick="display.value += '*' " class="operator"/>
+                    <div class="quiz-footer">
+                        <span class="quiz-total">1 of 10 Questions</span>
+                        <button class="next-btn">Next</button>
                     </div>
-                    <div>
-                        <input class="btn" type="button" value="4"  onclick="display.value += '4' "/>
-                        <input class="btn" type="button" value="5"  onclick="display.value += '5' "/>
-                        <input class="btn" type="button" value="6"  onclick="display.value += '6' "/>
-                        <input class="btn operator" type="button" value="-"  onclick="display.value += '-' " class="operator"/>
+                </div>
+                <div class="result-box">
+                    <h2>Quiz Result</h2>
+                    <div class="percentage-container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <span class="score-text">Your Score 0 out of 10</span>
                     </div>
-                    <div>
-                        <input class="btn" type="button" value="1"  onclick="display.value += '1' "/>
-                        <input class="btn" type="button" value="2"  onclick="display.value += '2' "/>
-                        <input class="btn" type="button" value="3"  onclick="display.value += '3' "/>
-                        <input class="btn operator" type="button" value="+"  onclick="display.value += '+' " class="operator"/>
+                    <div class="button">
+                        <button class="tryAgain-btn">Try Again</button>
+                        <button class="goHome-btn">Go To Home</button>
                     </div>
-                    <div>
-                        <input class="btn" type="button" value="00"  onclick="display.value += '00' "/>
-                        <input class="btn" type="button" value="0"  onclick="display.value += '0' "/>
-                        <input class="btn" type="button" value="0"  onclick="display.value += '0' "/>
-                        <input class="btn operator equal" type="button" value="=" onclick="display.value = eval(display.value)" class="operator"/>
-                    </div>
-            </form>
+                </div>
+            </section>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Quiz</h1>
+            <p>This Quiz Is According To HTML CSS And JavaScript.</p>
+            <button class="start-btn">Start Quiz</button>
+        </div>
+    </section>
+        </div>
+    </main>
+
+    <div class="popup-info">
+        <h2>Quiz Guide</h2>
+        <span class="info">1. You have a 30 second for one question.</span>
+        <span class="info">2. Every question contain 10 marks.</span>
+        <span class="info">3. Take a screenshot of your score at 70% you can pass this test</span>
+
+        <div class="btn-group">
+            <button class="info-button exit-btn">Exit Quiz</button>
+            <a href="#" class="info-button continue-btn">Continue</a>
         </div>
     </div>
-    <script src="calculator.js"></script>
+
+    <script src="script.js"></script>
+    <script src="question.js"></script>
+
 </body>
 </html>
